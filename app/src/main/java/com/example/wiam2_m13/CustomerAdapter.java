@@ -24,6 +24,7 @@ public class CustomerAdapter extends BaseAdapter{
     public int getCount() {
         //aqui devolvemos los elementos que queremos cargar
         return idImg.length;
+
     }
 
     @Override
