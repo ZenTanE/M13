@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onclick(View view) {
-//ssss
+//s
         switch (view.getId()){
             case R.id.btHome:
                     startActivity(new Intent(getApplicationContext(),home.class));
