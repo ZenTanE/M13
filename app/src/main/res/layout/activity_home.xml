@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home">
+    tools:context=".home"
+    android:background="@drawable/bar1">
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="85dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/loginuser4"
+        android:layout_width="68dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_stat_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +31,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/textV_subTitle"
@@ -42,44 +43,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textV_Title" />
 
-    <TextView
-        android:id="@+id/textV_TitleLocales"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Locales"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textV_subTitle" />
-
-    <ListView
-        android:id="@+id/listV_locales"
-        android:layout_width="348dp"
-        android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textV_TitleLocales" />
-
-    <TextView
-        android:id="@+id/textV_TitleMenu"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Menus"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listV_locales" />
+        app:layout_constraintTop_toBottomOf="@+id/textV_subTitle">
 
-    <ListView
-        android:layout_width="367dp"
-        android:layout_height="266dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textV_TitleMenu" />
+        <TextView
+            android:id="@+id/textV_TitleLocales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Locales"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ListView
+            android:id="@+id/listV_locales"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/textV_TitleMenu2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Menus"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="266dp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
