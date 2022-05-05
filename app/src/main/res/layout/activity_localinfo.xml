@@ -50,11 +50,10 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <androidx.gridlayout.widget.GridLayout
+            <GridView
+                android:id="@+id/gridV_PlatosLocalInfo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </androidx.gridlayout.widget.GridLayout>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
