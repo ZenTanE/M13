@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btHome).setOnClickListener(this::onclick);
         findViewById(R.id.btnLocalInf).setOnClickListener(this::onclick);
         findViewById(R.id.btnfoodDesc).setOnClickListener(this::onclick);
-//
+
     }
 
     private void onclick(View view) {
