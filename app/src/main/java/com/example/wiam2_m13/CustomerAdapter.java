@@ -14,6 +14,7 @@ import java.io.Console;
 public class CustomerAdapter extends BaseAdapter{
 
     Context context;
+
     Integer[] lst_id;
     //esto se cambiara
     private String[] nameItems = {"Hamburguesa", "Pizza", "Paella", "Croquetas", "Migas extremeñas", "Tortilla de patatas","Alcachofas","Callos","Bravas","Chuleta de Buey"};
