@@ -3,6 +3,7 @@ package com.example.wiam2_m13;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.CursorAdapter;
 import android.widget.GridLayout;
 import android.widget.GridView;
 

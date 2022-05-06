@@ -39,7 +39,7 @@
                 android:id="@+id/txtV_descLocal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="descripcion del local etc." />
+                android:text="Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen." />
 
             <TextView
                 android:id="@+id/txtV_MenusPlatos"
@@ -53,7 +53,16 @@
             <GridView
                 android:id="@+id/gridV_PlatosLocalInfo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:background="#CACACA"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="2"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:verticalSpacing="10dp" />
 
         </LinearLayout>
 
