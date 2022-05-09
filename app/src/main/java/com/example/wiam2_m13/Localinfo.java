@@ -8,6 +8,7 @@ import android.widget.GridLayout;
 import android.widget.GridView;
 
 public class Localinfo extends AppCompatActivity {
+    //le pasamos una cadena de los elemtos con los que trabajara de data.xml
     private Integer[] rowElementId ={R.layout.data,R.id.txtVData_nameFood,R.id.imgVData_minFood,R.id.txtVData_price};
     private GridView gridView;
     CustomerAdapter customerAdapter;
@@ -17,7 +18,7 @@ public class Localinfo extends AppCompatActivity {
         setContentView(R.layout.activity_localinfo);
 
         gridView = findViewById(R.id.gridV_PlatosLocalInfo);
-        customerAdapter = new CustomerAdapter(this,rowElementId);
+        customerAdapter = new CustomerAdapter(this,rowElementId,true);
         gridView.setAdapter(customerAdapter);
 
 

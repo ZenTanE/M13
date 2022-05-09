@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home"
-    android:background="@drawable/bar1">
+    android:background="@drawable/bar1"
+    tools:context=".home">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -63,10 +63,49 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
-        <ListView
-            android:id="@+id/listV_locales"
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Button" />
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <TextView
             android:id="@+id/textV_TitleMenu2"
@@ -78,6 +117,7 @@
             android:textSize="20sp" />
 
         <ListView
+            android:id="@+id/lstV_homeplatos"
             android:layout_width="match_parent"
             android:layout_height="266dp" />
     </LinearLayout>
