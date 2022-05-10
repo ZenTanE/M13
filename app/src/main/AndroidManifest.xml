@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WIAM2_M13">
         <activity
+            android:name=".foodDesc"
+            android:exported="false" />
+        <activity
+            android:name=".Localinfo"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

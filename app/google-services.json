@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648165532714",
+    "project_id": "wiam2-m13",
+    "storage_bucket": "wiam2-m13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648165532714:android:5b9d82ad6dd689cc158f53",
+        "android_client_info": {
+          "package_name": "com.example.wiam2_m13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648165532714-c3pc7sjk2j73hqaba5mhh0q88gsac89v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeabmTdK4Q_3Y1AWARb7BC9r2UOgRfDC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648165532714-c3pc7sjk2j73hqaba5mhh0q88gsac89v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
