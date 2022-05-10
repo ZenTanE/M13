@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".foodDesc"
+    tools:context=".FoodDesc"
     android:background="@drawable/plato2">
 
     <androidx.cardview.widget.CardView

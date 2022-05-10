@@ -7,7 +7,7 @@ import android.widget.CursorAdapter;
 import android.widget.GridLayout;
 import android.widget.GridView;
 
-public class Localinfo extends AppCompatActivity {
+public class LocalinfoActivity extends AppCompatActivity {
     private Integer[] rowElementId ={R.layout.data,R.id.txtVData_nameFood,R.id.imgVData_minFood,R.id.txtVData_price};
     private GridView gridView;
     CustomerAdapter customerAdapter;

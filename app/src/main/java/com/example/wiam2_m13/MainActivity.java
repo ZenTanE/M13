@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,13 +22,13 @@ public class MainActivity extends AppCompatActivity {
     private void onclick(View view) {
         switch (view.getId()){
             case R.id.btHome:
-                    startActivity(new Intent(getApplicationContext(),home.class));
+                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 break;
             case R.id.btnLocalInf:
-                startActivity(new Intent(getApplicationContext(),Localinfo.class));
+                startActivity(new Intent(getApplicationContext(), LocalinfoActivity.class));
                 break;
             case R.id.btnfoodDesc:
-                startActivity(new Intent(getApplicationContext(),foodDesc.class));
+                startActivity(new Intent(getApplicationContext(), FoodDesc.class));
                 break;
 
 
