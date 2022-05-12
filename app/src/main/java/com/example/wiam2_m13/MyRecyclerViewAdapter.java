@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +18,7 @@ class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.V
    private List<String> mPlatos;
    private LayoutInflater mInflater;
    private ItemClickListener mClickListener;
+   
    MyRecyclerViewAdapter(Context context, List<Integer> imgPlatos, List<String> strNombrePlato) {
       this.mInflater = LayoutInflater.from(context);
       this.mViewImgPlatos = imgPlatos;
@@ -35,10 +36,10 @@ class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.V
    // binds the data to the view and textview in each row
    @Override
    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-      int color = mViewImgPlatos.get(position);
-      String animal = mPlatos.get(position);
-      holder.myView.setBackgroundColor(color);
-      holder.myTextView.setText(animal);
+      int imgPlatos = mViewImgPlatos.get(position);
+      String namePlatos = mPlatos.get(position);
+      holder.myImageView.setImageResource(imgPlatos);
+      holder.myTextView.setText(namePlatos);
    }
 
    // total number of rows
@@ -49,12 +50,12 @@ class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.V
 
    // stores and recycles views as they are scrolled off screen
    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-      View myView;
+      ImageView myImageView;
       TextView myTextView;
 
       ViewHolder(View itemView) {
          super(itemView);
-         myView = itemView.findViewById(R.id.imgVData_minFood);
+         myImageView = itemView.findViewById(R.id.imgVData_minFood);
          myTextView = itemView.findViewById(R.id.txtVData_nameFood);
          itemView.setOnClickListener(this);
       }

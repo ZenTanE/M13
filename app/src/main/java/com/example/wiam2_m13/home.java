@@ -17,8 +17,8 @@ public class home extends AppCompatActivity implements MyRecyclerViewAdapter.Ite
     private Integer[] rowElementId1 ={R.layout.home_data,R.id.txtVData_nameFood,R.id.imgVHomeData,R.id.txtVData_price};//solo importa la de home data
     private ListView listView1;
     CustomerAdapter customerAdapter1;
-
-    MyRecyclerViewAdapter adapter,adapter1;
+    MyRecVAdpMin2 adapter1;
+    MyRecyclerViewAdapter adapter;
     private String[] nameItems1 = {"Hamburguesa", "Pizza", "Paella", "Croquetas", "Migas extremeñas", "Tortilla de patatas","Alcachofas","Callos","Bravas","Chuleta de Buey"};
     private Integer[] idImg = {R.drawable.hamburguesa,R.drawable.pizza,R.drawable.paella,R.drawable.croquetas,R.drawable.migas,R.drawable.tortilla,R.drawable.alcachofas,R.drawable.callos,R.drawable.bravas,R.drawable.chuleta};
 
@@ -37,9 +37,9 @@ public class home extends AppCompatActivity implements MyRecyclerViewAdapter.Ite
 
         RecyclerView recyclerView1 = findViewById(R.id.lstV_homeplatos);
         recyclerView1.setLayoutManager(horizontalLayoutManager);
-        adapter = new MyRecyclerViewAdapter(this, Arrays.asList(idImg), Arrays.asList(nameItems1));
-        adapter.setClickListener(this);
-        recyclerView1.setAdapter(adapter);
+        adapter1 = new MyRecVAdpMin2(this, Arrays.asList(idImg), Arrays.asList(nameItems1));
+        adapter1.setClickListener(this);
+        recyclerView1.setAdapter(adapter1);
 
         RecyclerView recyclerView = findViewById(R.id.rvPlatosLocalInfo);
         horizontalLayoutManager

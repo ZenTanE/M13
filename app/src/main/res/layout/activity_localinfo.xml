@@ -52,9 +52,16 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/gridV_PlatosLocalInfo"
-
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:background="#818181"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                />
 
             <!--
                         <GridView
