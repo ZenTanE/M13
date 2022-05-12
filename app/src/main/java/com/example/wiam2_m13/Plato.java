@@ -5,7 +5,7 @@ public class Plato {
     float rating;
     int imageUrl;
 
-    public Plato(String nombre, int imageUrl) {
+    public Plato(String nombre, int imageUrl,float rating,String type) {
         this.nombre = nombre;
         this.imageUrl = imageUrl;
     }

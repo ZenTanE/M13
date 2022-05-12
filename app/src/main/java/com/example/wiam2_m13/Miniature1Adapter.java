@@ -12,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
+class Miniature1Adapter extends RecyclerView.Adapter<Miniature1Adapter.ViewHolder> {
 
    private List<Plato> listaPlatos;
    private List<String> mPlatos;
    private LayoutInflater mInflater;
    private ItemClickListener mClickListener;
    
-   MyRecyclerViewAdapter(Context context, List<Plato> platoList) {
+   Miniature1Adapter(Context context, List<Plato> platoList) {
       this.mInflater = LayoutInflater.from(context);
       this.listaPlatos = platoList;
    }
@@ -28,7 +28,7 @@ class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.V
    @Override
    @NonNull
    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-      View view = mInflater.inflate(R.layout.data, parent, false);
+      View view = mInflater.inflate(R.layout.viewholder_item_data, parent, false);
       return new ViewHolder(view);
    }
 

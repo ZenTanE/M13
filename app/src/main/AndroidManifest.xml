@@ -13,7 +13,7 @@
             android:name=".FoodDescriptionActivity"
             android:exported="false" />
         <activity
-            android:name=".Localinfo"
+            android:name=".LocalinfoActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

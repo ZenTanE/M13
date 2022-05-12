@@ -11,23 +11,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class MiniatureAdapter extends RecyclerView.Adapter<MiniatureAdapter.ViewHolder> {
+public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.ViewHolder> {
 
     private List<Plato> listaPlatos;
     private LayoutInflater mInflater;
-    private MyRecyclerViewAdapter.ItemClickListener mClickListener;
+    private Miniature1Adapter.ItemClickListener mClickListener;
     private PlatoRatingChangeListener mPlatoRatingChangeListener;
 
-    public MiniatureAdapter(HomeActivity context, List<Plato> platoList) {
+    public Miniature2Adapter(HomeActivity context, List<Plato> platoList) {
         this.mInflater = LayoutInflater.from(context);
         this.listaPlatos = platoList;
     }
 
     @NonNull
     @Override
-    public MiniatureAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Miniature2Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.viewholder_home_data, parent, false);
-        return new MiniatureAdapter.ViewHolder(view);
+        return new Miniature2Adapter.ViewHolder(view);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class MiniatureAdapter extends RecyclerView.Adapter<MiniatureAdapter.View
     }
 
     // allows clicks events to be caught
-    public void setClickListener(MyRecyclerViewAdapter.ItemClickListener itemClickListener) {
+    public void setClickListener(Miniature1Adapter.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
