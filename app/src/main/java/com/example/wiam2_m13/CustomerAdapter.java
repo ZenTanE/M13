@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.io.Console;
 
-public class CustomerAdapter extends BaseAdapter{
+public class CustomerAdapter extends BaseAdapter {
 
     Context context;
 
@@ -49,6 +49,7 @@ public class CustomerAdapter extends BaseAdapter{
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         view = layoutInflater.inflate(lst_id[0], null);
+        
         //view = getLayoutInflater().inflate(R.layout.data, null);
         if(way==true) {
             TextView nameItem = (TextView) view.findViewById(lst_id[1]);

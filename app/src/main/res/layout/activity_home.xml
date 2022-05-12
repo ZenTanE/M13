@@ -63,49 +63,11 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
-        <HorizontalScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlatosLocalInfo"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/button11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/button12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Button" />
-
-                <Button
-                    android:id="@+id/button13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Button" />
-            </LinearLayout>
-        </HorizontalScrollView>
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
 
         <TextView
             android:id="@+id/textV_TitleMenu2"
@@ -116,7 +78,14 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
-        <ListView
+<!--        <ListView
+            android:id="@+id/lstV_homeplatos"
+            android:layout_width="match_parent"
+            android:layout_height="266dp" >
+
+        </ListView>-->
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lstV_homeplatos"
             android:layout_width="match_parent"
             android:layout_height="266dp" />
