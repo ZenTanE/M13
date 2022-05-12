@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imgVHomeData"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="false"
         android:layout_alignParentTop="false"
         android:layout_alignParentEnd="false"

@@ -14,24 +14,22 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Localinfo extends AppCompatActivity implements MyRecyclerViewAdapter.ItemClickListener {
     //le pasamos una cadena de los elemtos con los que trabajara de data.xml
     private Integer[] rowElementId ={R.layout.data,R.id.txtVData_nameFood,R.id.imgVData_minFood,R.id.txtVData_price};
     private GridView gridView;
     CustomerAdapter customerAdapter;
-
+    List<Plato> platoList;
     MyRecyclerViewAdapter adapter;
-    private String[] nameItems1 = {"Hamburguesa", "Pizza", "Paella", "Croquetas", "Migas extremeñas", "Tortilla de patatas","Alcachofas","Callos","Bravas","Chuleta de Buey"};
-    private Integer[] idImg = {R.drawable.hamburguesa,R.drawable.pizza,R.drawable.paella,R.drawable.croquetas,R.drawable.migas,R.drawable.tortilla,R.drawable.alcachofas,R.drawable.callos,R.drawable.bravas,R.drawable.chuleta};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_localinfo);
 
-
+        getPlatos();
 /*
         gridView = findViewById(R.id.gridV_PlatosLocalInfo);
         customerAdapter = new CustomerAdapter(this,rowElementId,true);
@@ -41,7 +39,7 @@ public class Localinfo extends AppCompatActivity implements MyRecyclerViewAdapte
         RecyclerView recyclerView = findViewById(R.id.gridV_PlatosLocalInfo);
         //LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        adapter = new MyRecyclerViewAdapter(this, Arrays.asList(idImg), Arrays.asList(nameItems1));
+        adapter = new MyRecyclerViewAdapter(this,platoList);
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
 
@@ -51,5 +49,20 @@ public class Localinfo extends AppCompatActivity implements MyRecyclerViewAdapte
     @Override
     public void onItemClick(View view, int position) {
         Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on item position " + position, Toast.LENGTH_SHORT).show();
+    }
+
+    private void getPlatos() {
+        platoList = new ArrayList<>();
+        platoList.add(new Plato("Hamburgues", R.drawable.hamburguesa));
+        platoList.add(new Plato("Pizza", R.drawable.pizza));
+        platoList.add(new Plato("Paella", R.drawable.paella));
+        platoList.add(new Plato("Croquetas", R.drawable.croquetas));
+        platoList.add(new Plato("Migas extremeñas", R.drawable.migas));
+        platoList.add(new Plato("Alcachofas", R.drawable.alcachofas));
+        platoList.add(new Plato("Callos", R.drawable.callos));
+        platoList.add(new Plato("Tortilla de patatas", R.drawable.tortilla));
+        platoList.add(new Plato("Bravas", R.drawable.bravas));
+        platoList.add(new Plato("Chuleta de Buey", R.drawable.chuleta));
+
     }
 }

@@ -14,15 +14,14 @@ import java.util.List;
 
 class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
-   private List<Integer> mViewImgPlatos;
+   private List<Plato> listaPlatos;
    private List<String> mPlatos;
    private LayoutInflater mInflater;
    private ItemClickListener mClickListener;
    
-   MyRecyclerViewAdapter(Context context, List<Integer> imgPlatos, List<String> strNombrePlato) {
+   MyRecyclerViewAdapter(Context context, List<Plato> platoList) {
       this.mInflater = LayoutInflater.from(context);
-      this.mViewImgPlatos = imgPlatos;
-      this.mPlatos = strNombrePlato;
+      this.listaPlatos = platoList;
    }
 
    // inflates the row layout from xml when needed
@@ -36,16 +35,15 @@ class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.V
    // binds the data to the view and textview in each row
    @Override
    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-      int imgPlatos = mViewImgPlatos.get(position);
-      String namePlatos = mPlatos.get(position);
-      holder.myImageView.setImageResource(imgPlatos);
-      holder.myTextView.setText(namePlatos);
+      Plato plato = listaPlatos.get(position);
+      holder.myImageView.setImageResource(plato.imageUrl);
+      holder.myTextView.setText(plato.nombre);
    }
 
    // total number of rows
    @Override
    public int getItemCount() {
-      return mPlatos.size();
+      return listaPlatos.size();
    }
 
    // stores and recycles views as they are scrolled off screen
@@ -67,8 +65,8 @@ class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.V
    }
 
    // convenience method for getting data at click position
-   public String getItem(int id) {
-      return mPlatos.get(id);
+   public Plato getItem(int id) {
+      return listaPlatos.get(id);
    }
 
    // allows clicks events to be caught

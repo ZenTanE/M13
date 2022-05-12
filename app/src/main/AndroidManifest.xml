@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WIAM2_M13">
         <activity
-            android:name=".foodDesc"
+            android:name=".FoodDescriptionActivity"
             android:exported="false" />
         <activity
             android:name=".Localinfo"
             android:exported="false" />
         <activity
-            android:name=".home"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

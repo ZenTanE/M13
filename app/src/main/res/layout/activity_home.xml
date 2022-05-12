@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bar1"
-    tools:context=".home">
+    tools:context=".HomeActivity">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -67,6 +67,8 @@
             android:id="@+id/rvPlatosLocalInfo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
             android:layout_weight="2" />
 
         <TextView
@@ -88,6 +90,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lstV_homeplatos"
             android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
             android:layout_height="266dp" />
     </LinearLayout>
 
