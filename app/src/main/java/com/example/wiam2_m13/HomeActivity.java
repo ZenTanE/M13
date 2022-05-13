@@ -21,6 +21,7 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
         getPlatos();
         getLocales();
 
+
         RecyclerView recyclerView1 = findViewById(R.id.lstV_homeplatos);
         miniaturaRectangular = new Miniature2Adapter(this, platoList );
         miniaturaRectangular.setClickListener(this);
