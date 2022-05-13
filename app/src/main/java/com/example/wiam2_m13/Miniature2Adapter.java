@@ -15,7 +15,7 @@ public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.Vi
 
     private List<Plato> listaPlatos;
     private LayoutInflater mInflater;
-    private Miniature1Adapter.ItemClickListener mClickListener;
+    private Miniature2Adapter.ItemClickListener mClickListener;
     private PlatoRatingChangeListener mPlatoRatingChangeListener;
 
     public Miniature2Adapter(HomeActivity context, List<Plato> platoList) {
@@ -33,7 +33,7 @@ public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Plato plato = listaPlatos.get(position);
-        Log.e("pruebas", "onBindViewHolder: "+plato );
+        Log.d("pruebas", "onBindViewHolder: "+plato );
         holder.myImageView.setImageResource(plato.imageUrl);
         holder.myRatingBar.setRating(plato.rating);
 
@@ -48,7 +48,7 @@ public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.Vi
     public int getItemCount() {return listaPlatos.size();}
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private final RatingBar myRatingBar;
+        private RatingBar myRatingBar;
         ImageView myImageView;
         TextView myTextView;
 
@@ -61,7 +61,8 @@ public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.Vi
 
         @Override
         public void onClick(View view) {
-            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+
+            if (mClickListener != null) mClickListener.onItemClickmin2(view, getAdapterPosition());
         }
     }
     public Plato getItem(int id) {
@@ -69,7 +70,7 @@ public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.Vi
     }
 
     // allows clicks events to be caught
-    public void setClickListener(Miniature1Adapter.ItemClickListener itemClickListener) {
+    public void setClickListener(Miniature2Adapter.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
@@ -79,7 +80,7 @@ public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.Vi
 
     // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
-        void onItemClick(View view, int position);
+        void onItemClickmin2(View view, int position);
     }
 
     public interface PlatoRatingChangeListener {

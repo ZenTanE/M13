@@ -31,22 +31,22 @@ public class LocalinfoActivity extends AppCompatActivity implements Miniature1Ad
     }
 
     @Override
-    public void onItemClick(View view, int position) {
+    public void onItemClickmin1(View view, int position) {
         Toast.makeText(this, "You clicked " + adapter.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
     }
 
     private void getPlatos() {
         platoList = new ArrayList<>();
-        platoList.add(new Plato("Hamburgues", R.drawable.hamburguesa,1,"plato"));
-        platoList.add(new Plato("Pizza", R.drawable.pizza,1,"plato"));
-        platoList.add(new Plato("Paella", R.drawable.paella,1,"plato"));
-        platoList.add(new Plato("Croquetas", R.drawable.croquetas,1,"plato"));
-        platoList.add(new Plato("Migas extremeñas", R.drawable.migas,1,"plato"));
-        platoList.add(new Plato("Alcachofas", R.drawable.alcachofas,1,"plato"));
-        platoList.add(new Plato("Callos", R.drawable.callos,1,"plato"));
-        platoList.add(new Plato("Tortilla de patatas", R.drawable.tortilla,1,"plato"));
-        platoList.add(new Plato("Bravas", R.drawable.bravas,1,"plato"));
-        platoList.add(new Plato("Chuleta de Buey", R.drawable.chuleta,1,"plato"));
+        platoList.add(new Plato("Hamburgues", R.drawable.hamburguesa,0.5F,"plato"));
+        platoList.add(new Plato("Pizza", R.drawable.pizza,0.5F,"plato"));
+        platoList.add(new Plato("Paella", R.drawable.paella,0.5F,"plato"));
+        platoList.add(new Plato("Croquetas", R.drawable.croquetas,0.5F,"plato"));
+        platoList.add(new Plato("Migas extremeñas", R.drawable.migas,0.5F,"plato"));
+        platoList.add(new Plato("Alcachofas", R.drawable.alcachofas,0.5F,"plato"));
+        platoList.add(new Plato("Callos", R.drawable.callos,0.5F,"plato"));
+        platoList.add(new Plato("Tortilla de patatas", R.drawable.tortilla,0.5F,"plato"));
+        platoList.add(new Plato("Bravas", R.drawable.bravas,0.5F,"plato"));
+        platoList.add(new Plato("Chuleta de Buey", R.drawable.chuleta,0.5F,"plato"));
 
     }
 }
