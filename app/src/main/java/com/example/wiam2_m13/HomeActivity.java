@@ -24,12 +24,12 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
         getLocales();
 
         RecyclerView recyclerView1 = findViewById(R.id.lstV_homeplatos);
-        miniaturaRectangular = new Miniature2Adapter(this, localesList);
+        miniaturaRectangular = new Miniature2Adapter(this, platoList );
         miniaturaRectangular.setClickListener(this);
         miniaturaRectangular.setRatingChangeListener((plato, newRating) -> plato.rating = newRating);
         recyclerView1.setAdapter(miniaturaRectangular);
         RecyclerView recyclerView = findViewById(R.id.rvPlatosLocalInfo);
-        miniaturaCuadrada = new Miniature1Adapter(this, platoList);
+        miniaturaCuadrada = new Miniature1Adapter(this, localesList);
         miniaturaCuadrada.setClickListener(this);
 
         recyclerView.setAdapter(miniaturaCuadrada);
@@ -63,18 +63,6 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
         localesList.add(new Plato("pal currante", R.drawable.bar1,0.0F,"plato"));
 
     }
-/*
-    @Override
-    public void onItemClick(View view, int position) {
-        //Toast.makeText(this, "You clicked " + miniaturaCuadrada.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
-        Intent intent;
-        intent = new Intent(this, FoodDescriptionActivity.class);
-        intent.putExtra("name", miniaturaRectangular.getItem(position).nombre);
-        intent.putExtra("urlImage", miniaturaRectangular.getItem(position).imageUrl);
-        intent.putExtra("rating", Float.valueOf(miniaturaRectangular.getItem(position).rating));
-        Log.d("ratingDebug1", "onItemClick:putExtra "+Float.valueOf(miniaturaRectangular.getItem(position).rating));
-        this.startActivity(intent);
-    }*/
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
@@ -83,8 +71,13 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
 
     @Override
     public void onItemClickmin2(View view, int position) {
-        Toast.makeText(this, "You clicked " + miniaturaRectangular.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
-
+        //Toast.makeText(this, "You clicked " + miniaturaRectangular.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, FoodDescriptionActivity.class);
+        intent.putExtra("name", miniaturaRectangular.getItem(position).nombre);
+        intent.putExtra("urlImage", miniaturaRectangular.getItem(position).imageUrl);
+        intent.putExtra("rating", miniaturaRectangular.getItem(position).rating.floatValue());
+        Log.d("ratingDebug1", "onItemClick:putExtra "+miniaturaRectangular.getItem(position).rating.floatValue());
+        this.startActivity(intent);
     }
 
     @Override

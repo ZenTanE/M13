@@ -32,7 +32,7 @@ public class FoodDescriptionActivity extends AppCompatActivity {
 
     private void setData() {
         txtV_namePlatos.setText(nombrePlato);
-        ratingBar.setRating(3.5F);
+        ratingBar.setRating(rating);
 
         ///li.setBackgroundResource(urlImage);
     }
@@ -41,8 +41,8 @@ public class FoodDescriptionActivity extends AppCompatActivity {
         if (getIntent().hasExtra("name") && getIntent().hasExtra("urlImage")) {
             nombrePlato = getIntent().getStringExtra("name");
             urlImage =Integer.getInteger(getIntent().getStringExtra("urlImage"));
-            //rating = Float.valueOf(getIntent().getStringExtra("rating"));
-            Log.d("ratingDebug2", "setData: "+getIntent().getStringExtra("rating"));
+            rating = getIntent().getFloatExtra("rating",0.0F);
+            Log.d("ratingDebug2", "setData: "+getIntent().getFloatExtra("rating",0.0F));
         } else {
             Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
         }
