@@ -1,6 +1,8 @@
 package com.example.wiam2_m13;
 
-public class Plato {
+import java.io.Serializable;
+
+public class Plato implements Serializable {
     String nombre;
     Float rating;
     int imageUrl;

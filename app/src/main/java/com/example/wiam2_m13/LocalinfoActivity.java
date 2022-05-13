@@ -3,12 +3,10 @@ package com.example.wiam2_m13;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +14,8 @@ public class LocalinfoActivity extends AppCompatActivity implements Miniature1Ad
     //le pasamos una cadena de los elemtos con los que trabajara de data.xml
     List<Plato> platoList;
     Miniature1Adapter adapter;
+    Plato localRecivido;
+    TextView nombreLocal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,28 @@ public class LocalinfoActivity extends AppCompatActivity implements Miniature1Ad
         adapter = new Miniature1Adapter(this,platoList);
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
-
+        nombreLocal=findViewById(R.id.txtV_TitleLocal);
+        getData();
+        setData();
     }
 
     @Override
     public void onItemClickmin1(View view, int position) {
         Toast.makeText(this, "You clicked " + adapter.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
+    }
+    private void setData() {
+        if(localRecivido !=null) {
+            nombreLocal.setText(localRecivido.nombre);
+        }else{
+        }
+    }
+    private void getData() {
+        if (getIntent().hasExtra("envioObjetoPruebaLocal")) {
+          localRecivido = (Plato) getIntent().getSerializableExtra("envioObjetoPruebaLocal");
+          Toast.makeText(this, "localRecivido : "+localRecivido.nombre, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void getPlatos() {

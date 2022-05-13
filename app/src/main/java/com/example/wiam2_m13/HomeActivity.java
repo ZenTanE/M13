@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +35,7 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
 
     private void getPlatos() {
         platoList = new ArrayList<>();
-        platoList.add(new Plato("Hamburgues", R.drawable.hamburguesa,0.5F,"plato"));
+        platoList.add(new Plato("Hamburguesa", R.drawable.hamburguesa,0.5F,"plato"));
         platoList.add(new Plato("Pizza", R.drawable.pizza,0.5F,"plato"));
         platoList.add(new Plato("Paella", R.drawable.paella,0.5F,"plato"));
         platoList.add(new Plato("Croquetas", R.drawable.croquetas,0.5F,"plato"));
@@ -73,16 +71,16 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
     public void onItemClickmin2(View view, int position) {
         //Toast.makeText(this, "You clicked " + miniaturaRectangular.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, FoodDescriptionActivity.class);
-        intent.putExtra("name", miniaturaRectangular.getItem(position).nombre);
-        intent.putExtra("urlImage", miniaturaRectangular.getItem(position).imageUrl);
-        intent.putExtra("rating", miniaturaRectangular.getItem(position).rating.floatValue());
-        Log.d("ratingDebug1", "onItemClick:putExtra "+miniaturaRectangular.getItem(position).rating.floatValue());
+        Plato pl = miniaturaRectangular.getItem(position);
+        intent.putExtra("envioObjetoPrueba", (Serializable) pl);
         this.startActivity(intent);
     }
 
     @Override
     public void onItemClickmin1(View view, int position) {
-        Toast.makeText(this, "You clicked " + miniaturaCuadrada.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(this, LocalinfoActivity.class);
+        Plato localenviado = miniaturaCuadrada.getItem(position);
+        intent.putExtra("envioObjetoPruebaLocal", (Serializable) localenviado);
+        this.startActivity(intent);
     }
 }
