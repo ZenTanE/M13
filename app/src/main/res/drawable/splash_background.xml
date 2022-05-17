@@ -5,5 +5,7 @@
 
     <item>
         <bitmap android:src="@drawable/splash1"/>
+
     </item>
+
 </layer-list>

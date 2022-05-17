@@ -18,6 +18,7 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //
         getPlatos();
         getLocales();
 
