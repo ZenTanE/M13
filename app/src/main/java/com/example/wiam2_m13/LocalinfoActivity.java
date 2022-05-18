@@ -3,10 +3,14 @@ package com.example.wiam2_m13;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +38,12 @@ public class LocalinfoActivity extends AppCompatActivity implements Miniature1Ad
 
     @Override
     public void onItemClickmin1(View view, int position) {
-        Toast.makeText(this, "You clicked " + adapter.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "You clicked " + adapter.getItem(position).nombre + " on item position " + position, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, FoodDescriptionActivity.class);
+        Plato pl = adapter.getItem(position);
+        intent.putExtra("envioObjetoPrueba", (Serializable) pl);
+        this.startActivity(intent);
+
     }
     private void setData() {
         if(localRecivido !=null) {
