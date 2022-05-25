@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), LocalinfoActivity.class));
                 break;
             case R.id.btnfoodDesc:
-                startActivity(new Intent(getApplicationContext(), FoodDesc.class));
+                startActivity(new Intent(getApplicationContext(), FoodDescriptionActivity.class));
                 break;
 
 
