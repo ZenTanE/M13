@@ -1,9 +1,13 @@
 package com.example.wiam2_m13;
 
+import static android.content.ContentValues.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -12,6 +16,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.AccountPicker;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -47,7 +54,7 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
         profile_ImageView = findViewById(R.id.home_Profile_ImageView);
         profile_ImageView.setOnClickListener(view -> {
 
-            // TODO: CALL THE METHOD FROM THE FIREBASE CLASS
+            // TODO: Call the account selector method when it's finished
 
         });
     }
