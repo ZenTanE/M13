@@ -25,6 +25,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         findViewById(R.id.btHome).setOnClickListener(this::onclick);
         findViewById(R.id.btnLocalInf).setOnClickListener(this::onclick);
@@ -90,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void accederConGoogle() {
+        /*
         GoogleSignInClient googleSignInClient;
         googleSignInClient = GoogleSignIn.getClient(requireActivity(), new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -99,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         startActivityForResult(googleSignInClient.getSignInIntent(), 12345);
-
+*/
     }
 
     @Override

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FDFDF9"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_comentarios"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/callos"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/txt_usernameComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/profile_image_comentarios"
+                android:fontFamily="sans-serif"
+                android:hint="nombre de usuario"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextClock
+                android:id="@+id/txt_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_usernameComentario"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/profile_image_comentarios"
+                android:text="00:00" />
+
+            <TextView
+                android:id="@+id/txt_textoComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image_comentarios"
+                android:layout_marginTop="8dp"
+                android:hint="As this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables"
+                android:padding="8dp"
+                android:textAlignment="viewStart"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
