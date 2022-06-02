@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="4EVER \nANGRY"
+        android:text="4EVER \nhungry"
         android:textAlignment="center"
         android:textSize="44sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -25,9 +25,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity implements Miniature1Adapter.ItemClickListener, Miniature2Adapter.ItemClickListener {
+public class HomeActivity extends AppCompatActivity implements Miniature3Adapter.ItemClickListener, Miniature2Adapter.ItemClickListener {
     Miniature2Adapter miniaturaRectangular;
-    Miniature1Adapter miniaturaCuadrada;
+    Miniature3Adapter miniaturaCuadrada;
     ImageView profile_ImageView;
     List<Plato> platoList,localesList;
     @Override
@@ -46,15 +46,15 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
         miniaturaRectangular.setRatingChangeListener((plato, newRating) -> plato.rating = newRating);
         recyclerView1.setAdapter(miniaturaRectangular);
         RecyclerView recyclerView = findViewById(R.id.rvPlatosLocalInfo);
-        miniaturaCuadrada = new Miniature1Adapter(this, localesList);
+
+
+        miniaturaCuadrada = new Miniature3Adapter(this, localesList);
         miniaturaCuadrada.setClickListener(this);
 
         recyclerView.setAdapter(miniaturaCuadrada);
 
         profile_ImageView = findViewById(R.id.home_Profile_ImageView);
         profile_ImageView.setOnClickListener(view -> {
-
-            // TODO: Call the account selector method when it's finished
 
         });
     }
@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
     private void getLocales() {
         localesList = new ArrayList<>();
         localesList.add(new Plato("los manolos", R.drawable.bar1,0.5F,"plato"));
-        localesList.add(new Plato("Los peques", R.drawable.bar2,0.5F,"plato"));
+        localesList.add(new Plato("Los peques", R.drawable.bravas,0.5F,"plato"));
         localesList.add(new Plato("segovia", R.drawable.bar1,0.5F,"plato"));
         localesList.add(new Plato("5 Puertas", R.drawable.bar1,0.5F,"plato"));
         localesList.add(new Plato("el escondite", R.drawable.bar1,0.0F,"plato"));
@@ -103,7 +103,7 @@ public class HomeActivity extends AppCompatActivity implements Miniature1Adapter
     }
 
     @Override
-    public void onItemClickmin1(View view, int position) {
+    public void onItemClickmin3(View view, int position) {
         Intent intent = new Intent(this, LocalinfoActivity.class);
         Plato localenviado = miniaturaCuadrada.getItem(position);
         intent.putExtra("envioObjetoPruebaLocal", (Serializable) localenviado);

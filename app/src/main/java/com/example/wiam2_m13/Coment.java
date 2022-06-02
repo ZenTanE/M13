@@ -1,7 +1,5 @@
 package com.example.wiam2_m13;
 
-import java.util.Date;
-
 class Coment {
    String username;
    String date;
