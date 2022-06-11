@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wiam2_m13.Adapters.Miniature1Adapter;
+import com.example.wiam2_m13.objetos.Plato;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,16 +65,16 @@ public class LocalinfoActivity extends AppCompatActivity implements Miniature1Ad
 
     private void getPlatos() {
         platoList = new ArrayList<>();
-        platoList.add(new Plato("Hamburgues", R.drawable.hamburguesa,0.5F,"plato"));
-        platoList.add(new Plato("Pizza", R.drawable.pizza,0.5F,"plato"));
-        platoList.add(new Plato("Paella", R.drawable.paella,0.5F,"plato"));
-        platoList.add(new Plato("Croquetas", R.drawable.croquetas,0.5F,"plato"));
-        platoList.add(new Plato("Migas extremeñas", R.drawable.migas,0.5F,"plato"));
-        platoList.add(new Plato("Alcachofas", R.drawable.alcachofas,0.5F,"plato"));
-        platoList.add(new Plato("Callos", R.drawable.callos,0.5F,"plato"));
-        platoList.add(new Plato("Tortilla de patatas", R.drawable.tortilla,0.5F,"plato"));
-        platoList.add(new Plato("Bravas", R.drawable.bravas,0.5F,"plato"));
-        platoList.add(new Plato("Chuleta de Buey", R.drawable.chuleta,0.5F,"plato"));
+        platoList.add(new Plato("Hamburgues", R.drawable.hamburguesa,0.5F,"plato" ,"3,5€"));
+        platoList.add(new Plato("Pizza", R.drawable.pizza,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Paella", R.drawable.paella,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Croquetas", R.drawable.croquetas,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Migas extremeñas", R.drawable.migas,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Alcachofas", R.drawable.alcachofas,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Callos", R.drawable.callos,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Tortilla de patatas", R.drawable.tortilla,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Bravas", R.drawable.bravas,0.5F,"plato","3,5€"));
+        platoList.add(new Plato("Chuleta de Buey", R.drawable.chuleta,0.5F,"plato","3,5€"));
 
     }
 }

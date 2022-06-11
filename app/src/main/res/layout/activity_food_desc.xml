@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="Nombre del plato"
+                android:text="@string/Nombre_Plato"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -48,6 +48,8 @@
 
             <Button
                 android:id="@+id/button3"
+                app:icon="@drawable/shopping_cart"
+                android:background="@drawable/style_rectangle_corner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -58,7 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="Ingredientes"
+                android:text="@string/Ingredientes"
+                android:layout_marginBottom="4dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -74,7 +77,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="Opiniones"
+                android:text="@string/Opiniones"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

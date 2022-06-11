@@ -1,4 +1,4 @@
-package com.example.wiam2_m13;
+package com.example.wiam2_m13.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,16 +10,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wiam2_m13.R;
+import com.example.wiam2_m13.objetos.Plato;
+
 import java.util.List;
 
-class Miniature1Adapter extends RecyclerView.Adapter<Miniature1Adapter.ViewHolder> {
+public class Miniature1Adapter extends RecyclerView.Adapter<Miniature1Adapter.ViewHolder> {
 
    private List<Plato> listaPlatos;
-   private List<String> mPlatos;
    private LayoutInflater mInflater;
    private ItemClickListener mClickListener;
-   
-   Miniature1Adapter(Context context, List<Plato> platoList) {
+
+   public Miniature1Adapter(Context context, List<Plato> platoList) {
       this.mInflater = LayoutInflater.from(context);
       this.listaPlatos = platoList;
    }

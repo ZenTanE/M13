@@ -1,4 +1,4 @@
-package com.example.wiam2_m13;
+package com.example.wiam2_m13.Adapters;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -6,9 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
-import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.wiam2_m13.HomeActivity;
+import com.example.wiam2_m13.R;
+import com.example.wiam2_m13.objetos.Plato;
+
 import java.util.List;
 
 public class Miniature2Adapter extends RecyclerView.Adapter<Miniature2Adapter.ViewHolder> {

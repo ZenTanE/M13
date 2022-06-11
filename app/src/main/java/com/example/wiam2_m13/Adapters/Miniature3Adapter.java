@@ -1,15 +1,17 @@
-package com.example.wiam2_m13;
+package com.example.wiam2_m13.Adapters;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.wiam2_m13.HomeActivity;
+import com.example.wiam2_m13.R;
+import com.example.wiam2_m13.objetos.Plato;
 
 import java.util.List;
 
@@ -36,14 +38,7 @@ public class Miniature3Adapter extends RecyclerView.Adapter<Miniature3Adapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Plato plato = listaPlatos.get(position);
         holder.myImageView.setImageResource(plato.imageUrl);
-        /*
-        holder.myRatingBar.setRating(plato.rating);
 
-        holder.myRatingBar.setOnRatingBarChangeListener((ratingBar, newRating, fromUser) -> {
-            if (fromUser && mPlatoRatingChangeListener != null) {
-                mPlatoRatingChangeListener.onRatingChange(plato, newRating);
-            }
-        });*/
     }
 
     @Override

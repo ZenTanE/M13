@@ -1,15 +1,19 @@
 package com.example.wiam2_m13;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.wiam2_m13.Adapters.MiniatureOpinionsAdapter;
+import com.example.wiam2_m13.objetos.Coment;
+import com.example.wiam2_m13.objetos.Plato;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,8 +26,8 @@ public class FoodDescriptionActivity extends AppCompatActivity implements View.O
 
     ArrayList<Plato> carrito;
     RecyclerView recycleViewopiniones;
-    List<Coment> listaComentarios = new ArrayList<>();
-    Adapter adapter;
+    List<Coment> listaComentarios = new ArrayList<Coment>();
+    com.example.wiam2_m13.Adapters.MiniatureOpinionsAdapter MiniatureOpinionsAdapter;
     TextView txtV_namePlatos;
     RatingBar ratingBar;
     Plato platoRecivido;
@@ -45,9 +49,8 @@ public class FoodDescriptionActivity extends AppCompatActivity implements View.O
         findViewById(R.id.button3).setOnClickListener(this);
         //apartado opiniones
         recycleViewopiniones = findViewById(R.id.rvOpiniones);
-        adapter = new Adapter(this,listaComentarios,listaComentarios.size());
-        recycleViewopiniones.setAdapter(adapter);
-
+        MiniatureOpinionsAdapter = new MiniatureOpinionsAdapter(this,listaComentarios,listaComentarios.size());
+        recycleViewopiniones.setAdapter(MiniatureOpinionsAdapter);
 
     }
 
@@ -89,6 +92,16 @@ public class FoodDescriptionActivity extends AppCompatActivity implements View.O
         if(view.getId()==R.id.button3){
             carrito.add(platoRecivido);
             Toast.makeText(this, "se añadio a la nota.", Toast.LENGTH_SHORT).show();
+            BottomSheetFragment bottomSheetFragment = new BottomSheetFragment();
+            //enviar el plato recivido
+            Bundle bundle = new Bundle();
+            bundle.putString("nombre",platoRecivido.nombre);
+            bundle.putString("precio",platoRecivido.price);
+            bundle.putInt("imagen", platoRecivido.imageUrl);
+            bundle.putInt("cantidad",1);
+            bottomSheetFragment.setArguments(bundle);
+            bottomSheetFragment.show(getSupportFragmentManager(),bottomSheetFragment.getTag());
+
         }
         Log.d("CARRITO", "onClick: carrito.size "+carrito.size());
         for (Plato plato:carrito) {
