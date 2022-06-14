@@ -28,7 +28,6 @@ public class HomeActivity extends AppCompatActivity implements Miniature3Adapter
     Miniature3Adapter miniaturaCuadrada;
     ImageView profile_ImageView;
     List<Plato> platoList,localesList;
-    List<PlaceholderContent.PlaceholderItem> localesList1;
     private SignInButton googleSignInButton;
 
     @Override
@@ -36,7 +35,7 @@ public class HomeActivity extends AppCompatActivity implements Miniature3Adapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //
+
         getPlatos();
         getLocales();
 
@@ -68,12 +67,9 @@ public class HomeActivity extends AppCompatActivity implements Miniature3Adapter
             public void onClick(View view) {
                 //accederConGoogle();
 
-                Log.d("Itemsobj", "onClick: items"+ ITEMS);
-                PlaceholderContent.PlaceholderItem item = ITEMS.get(2);
                 for(int i =0;i<ITEMS.size();i++){
                     Log.d("Itemsobj", "onClick: "+ITEMS.get(i).nombre+" fecha: "+ITEMS.get(i).date);
                 }
-
             }
         });
         dialog.show();

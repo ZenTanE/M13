@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wiam2_m13.HomeActivity;
 import com.example.wiam2_m13.R;
 import com.example.wiam2_m13.objetos.Plato;
+import com.example.wiam2_m13.placeholder.PlaceholderContent;
 
 import java.util.List;
 

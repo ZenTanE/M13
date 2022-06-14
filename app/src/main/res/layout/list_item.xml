@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/listitemImageView1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:src="@drawable/callos" />
@@ -27,22 +27,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/listitemTextView1"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/listitemImageView1"
         android:text="cantidad"
         android:textColor="#8E8787"
-        android:textSize="10sp" />
+        android:textSize="19sp" />
 
     <TextView
         android:id="@+id/listitemTextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/listitemTextView1"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="0dp"
-        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:text="precio"
         android:textColor="#FF8E8787"
-        android:layout_toEndOf="@+id/listitemTextView2"
-        android:text="precio" />
+        android:textSize="19sp" />
 
 </RelativeLayout>

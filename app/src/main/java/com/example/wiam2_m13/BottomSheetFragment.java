@@ -2,21 +2,15 @@ package com.example.wiam2_m13;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
+import android.widget.TextView;
 
-import com.example.wiam2_m13.Adapters.MiniarutaCarritoAdapter;
-import com.example.wiam2_m13.objetos.Coment;
+import com.example.wiam2_m13.Adapters.MiniatureCarritoAdapterv2;
 import com.example.wiam2_m13.objetos.Plato;
-import com.example.wiam2_m13.placeholder.PlaceholderContent;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.ArrayList;
@@ -25,10 +19,10 @@ import java.util.List;
 public class BottomSheetFragment extends BottomSheetDialogFragment {
     String nombre,precio;
     int cantidad,imgUrl;
-    Adapter myAdapter;
     List<Plato> lista_platos = new ArrayList<Plato>();
-    private MiniarutaCarritoAdapter miniarutaCarritoAdapter;
-
+    private MiniatureCarritoAdapterv2 miniarutaCarritoAdapter;
+    RecyclerView recyclerViewCarrito;
+    private TextView precioTotal;
     public BottomSheetFragment() {
         // Required empty public constructor
     }
@@ -43,8 +37,9 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
             precio = getArguments().getString("precio");
             cantidad = getArguments().getInt("cantidad");
             Plato pl = new Plato(nombre,imgUrl,0.0F,"plato",precio);
-            lista_platos .add(pl);
+            lista_platos.add(pl);
         }
+
     }
 
     @Override
@@ -52,10 +47,12 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bottom_sheet, container, false);
+        recyclerViewCarrito = view.findViewById(R.id.listaCarrito);
+        miniarutaCarritoAdapter = new MiniatureCarritoAdapterv2(lista_platos,lista_platos.size());
+        recyclerViewCarrito.setAdapter(miniarutaCarritoAdapter);
 
-        RecyclerView recyclerView = view.findViewById(R.id.List);
-        miniarutaCarritoAdapter = new MiniarutaCarritoAdapter(this.getContext(),lista_platos);
-        recyclerView.setAdapter(miniarutaCarritoAdapter);
+        precioTotal = view.findViewById(R.id.textView4);
+        precioTotal.setText(precio);
         return view;
     }
 

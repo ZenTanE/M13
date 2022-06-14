@@ -47,7 +47,7 @@ public class PlaceholderContent {
 
     private static PlaceholderItem createPlaceholderItem(int position) {
 
-        return new PlaceholderItem(String.valueOf(position),R.drawable.hamburguesa ,"Item " + position,1.5F,"2.25", makeDetails(position),"opinion for Item "+String.valueOf(position),getDateTime());
+        return new PlaceholderItem(String.valueOf(position),R.drawable.hamburguesa ,"Item_" + position,1.5F,"2.25", makeDetails(position),"opinion for Item "+String.valueOf(position),getDateTime());
     }
 
     private static String makeDetails(int position) {
